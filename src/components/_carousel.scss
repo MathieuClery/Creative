@@ -1,0 +1,143 @@
+.carousel {
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 44.5% 48px auto;
+    grid-template-rows: 352px 120px;
+  }
+  @media (min-width: $desktop) {
+    grid-template-columns: 545px 190px 705px;
+    grid-template-rows: 528px 367px;
+  }
+
+  &__gallery-images {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 472px;
+  }
+
+  &__figure {
+    display: none;
+
+    &.active {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  &__image {
+    grid-column: 1 /2;
+    grid-row: 1 / 3;
+
+    & img {
+      width: 100%;
+      height: 472px;
+      object-fit: cover;
+
+      @media (min-width: $desktop) {
+        height: 728px;
+      }
+    }
+  }
+
+  &__figcaption {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: end;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    color: $white;
+    transform: translateY(- .4rem);
+  }
+
+  &__figcaption-title {
+    margin-bottom: 0;
+  }
+
+  &__figcaption-date {
+    margin: 0;
+  }
+}
+
+.carousel__navigation {
+  background-color: $dark-color;
+  padding: 4rem 0;
+  transform: translateY(-.55rem);
+  color: $white;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    margin-top: 8px;
+  }
+
+  &::after {
+    @media (min-width: $tablet) {
+      content: url("./../assets/desktop/bg-pattern-wavy-white.svg");
+      display: block;
+      position: absolute;
+      top: 42%;
+      left: 93%;
+      zoom: 50%;
+    }
+    @media (min-width: $laptop) {
+      left: 94%;
+    }
+    @media (min-width: $desktop) {
+      left: 92%;
+      top: 31%;
+      zoom: 100%;
+    }
+  }
+
+  &-title {
+    display: none;
+
+    &.active {
+      display: inline-block;
+      margin-left: 25px;
+      width: 73%;
+
+      @media (min-width: $laptop) {
+        margin-left: 65px;
+      }
+      @media (min-width: $desktop) {
+        margin-left: 165px;
+      }
+    }
+  }
+}
+
+.carousel__navigations-btn {
+  margin-left: 25px;
+  cursor: inherit;
+
+  @media (min-width: $laptop) {
+    margin-left: 65px;
+  }
+  @media (min-width: $desktop) {
+    margin-left: 165px;
+  }
+
+  &-next {
+    margin-left: 10px;
+  }
+}
+
+.navigation__carousel-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 1;
+
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}

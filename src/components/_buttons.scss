@@ -1,0 +1,177 @@
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+.heading__responsive-btn {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 25px;
+
+  &.active {
+    .lines:nth-child(1) {
+      top: 12px;
+      transform: rotate(495deg);
+    }
+
+    .lines:nth-child(2) {
+      opacity: 0;
+      width: 0;
+    }
+
+    .lines:nth-child(3) {
+      top: 12px;
+      transform: rotate(-135deg);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.lines {
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: $dark-color;
+  position: absolute;
+  cursor: pointer;
+  transition: all .8s ease-in-out;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+
+  &:nth-child(2) {
+    top: 10px;
+  }
+
+  &:nth-child(3) {
+    top: 20px
+  }
+}
+
+.navigation__btn {
+  color: $white;
+  background-color: $primary-color;
+  font-family: $heading_font;
+  padding: 1rem 2rem;
+  @include hover-animation;
+  cursor: pointer;
+  border: none;
+  min-width: 174px;
+
+  &:hover {
+    @extend %opacity;
+  }
+
+  &:active {
+    @extend %opacity;
+  }
+
+  @media (min-width: $tablet) {
+    background-color: $dark-color;
+    margin-left: 15px;
+  }
+  @media (min-width: $tablet) {
+    margin-left: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Others buttons
+--------------------------------------------------------------*/
+
+.hero__btn,
+.footer__btn,
+.form-btn {
+  color: $white;
+  background-color: $primary-color;
+  font-family: $heading_font;
+  font-size: $body_font_size;
+  padding: 1rem 2rem;
+  @include hover-animation;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    @extend %opacity;
+  }
+
+  &:active {
+    @extend %opacity;
+  }
+}
+
+.about__btn {
+  color: $primary-color;
+  position: relative;
+  @include hover-animation;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    border-radius: 5px;
+    background: $primary-color;
+    margin: 0 auto;
+    left: 0;
+    top: 1.57rem;
+    width: 100%;
+    @include hover-animation;
+    cursor: pointer;
+  }
+
+  &:hover {
+    @extend %opacity;
+  }
+
+  &:active {
+    @extend %opacity;
+  }
+
+  &:hover::after {
+    @extend %opacity;
+  }
+
+  &:active::after {
+    @extend %opacity;
+  }
+}
+
+.carousel__navigations-btn-previous {
+  @include hover-animation;
+  cursor: pointer;
+
+  &:hover {
+    @extend %opacity;
+  }
+
+  &:active {
+    @extend %opacity;
+  }
+}
+
+.carousel__navigations-btn-next {
+  @include hover-animation;
+  cursor: pointer;
+
+  &:hover {
+    @extend %opacity;
+  }
+
+  &:active {
+    @extend %opacity;
+  }
+}
+
+%opacity {
+  opacity: .9;
+}

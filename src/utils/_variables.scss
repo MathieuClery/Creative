@@ -1,0 +1,24 @@
+$primary-color: #f94f4f;
+$dark-color: #191921;
+$white: #ffffff;
+$text-color: #000000;
+
+$heading_font: 'Commissioner-ExtraBold', sans-serif;
+$body_font: 'Commissioner-Regular', sans-serif;
+
+$heading1_line_height: 1.1;
+$heading2_line_height: 1.15;
+$heading3_line_height: 1.6;
+$body_line_height: 1.8;
+
+/* From https://websemantics.uk/tools/responsive-font-calculator/ */
+$heading1_font_size: clamp(40px, calc(2.5rem + ((1vw - 3.75px) * 3.7559)), 80px);
+$heading2_font_size: clamp(32px, calc(2rem + ((1vw - 3.75px) * 2.2535)), 56px);
+$heading3_font_size: clamp(15px, calc(0.9375rem + ((1vw - 3.75px) * 0.4695)), 20px);
+$body_font_size: clamp(15px, calc(0.9375rem + ((1vw - 3.75px) * 0.2817)), 18px);
+$navigation_font_size: 16px;
+
+$mobile: 375px;
+$tablet: 768px;
+$laptop: 1080px;
+$desktop: 1440px;

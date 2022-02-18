@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+  background-color: $white;
+  padding: 4rem 0 6rem 0;
+  overflow-x: hidden;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 3rem 39px 8rem 39px;
+  }
+  @media (min-width: $laptop) {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  @media (min-width: $desktop) {
+    padding-left: 165px;
+    padding-right: 165px;
+  }
+}
+
+.footer {
+  &__title {
+    width: 90%;
+    margin: 0 auto 4rem 25px;
+
+    @media (min-width: $tablet) {
+      flex-basis: 70%;
+      margin: 0;
+    }
+    @media (min-width: $laptop) {
+      flex-basis: 60%;
+      position: relative;
+    }
+
+    &::before {
+
+      @media (min-width: $laptop) {
+        content: url("./../assets/desktop/bg-pattern-wave-red.svg");
+        display: block;
+        position: absolute;
+        top: 39%;
+        left: -153px;
+        zoom: 75%;
+      }
+      @media (min-width: $desktop) {
+        left: -260px;
+      }
+    }
+  }
+
+  &__btn {
+    margin-left: 25px;
+
+    @media (min-width: $tablet) {
+      margin-left: 0;
+      flex-basis: 26%;
+    }
+    @media (min-width: $laptop) {
+      margin-left: 65px;
+      flex-basis: 20%;
+    }
+    @media (min-width: $desktop) {
+      flex-basis: 18%;
+    }
+  }
+}

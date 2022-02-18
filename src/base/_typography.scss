@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Commissioner-Regular';
+  src: url('./../fonts/Commissioner-Regular.woff2') format('woff2'),
+  url('./../fonts/Commissioner-Regular.woff') format('woff'),
+  url('./../fonts/Commissioner-Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Commissioner-ExtraBold';
+  src: url('./../fonts/Commissioner-ExtraBold.woff2') format('woff2'),
+  url('./../fonts/Commissioner-ExtraBold.woff') format('woff'),
+  url('./../fonts/Commissioner-ExtraBold.svg') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+body {
+  color: $text-color;
+  font-family: $body_font;
+  font-weight: 400;
+  line-height: $body_line_height;
+  font-size: $body_font_size;
+  min-height: 0vw;
+}
+
+h1, h2, h3 {
+  clear: both;
+  font-family: $heading_font;
+  font-weight: 800;
+  min-height: 0vw;
+}
+
+h1 {
+  line-height: $heading1_line_height;
+  font-size: $heading1_font_size;
+}
+
+h2 {
+  line-height: $heading2_line_height;
+  font-size: $heading2_font_size;
+}
+
+h3 {
+  line-height: $heading3_line_height;
+  font-size: $heading3_font_size;
+}

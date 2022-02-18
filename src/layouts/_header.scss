@@ -1,0 +1,117 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header {
+
+  @media (min-width: $tablet) {
+    height: 178px;
+    width: 100%;
+  }
+}
+
+.heading {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background-color: $white;
+  z-index: 10;
+
+  @media (min-width: $tablet) {
+    height: 178px;
+    width: 43%;
+  }
+  @media (min-width: $laptop) {
+    width: 51%;
+  }
+ }
+
+.heading__logo {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+
+  @media (min-width: $tablet) {
+    top: 67px;
+    left: 39px;
+  }
+  @media (min-width: $laptop) {
+    position: absolute;
+    left: 65px;
+  }
+  @media (min-width: $desktop) {
+    margin-left: 100px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.navigation {
+  font-size: $navigation_font_size;
+  position: fixed;
+  top: -214px;
+  right: 45px;
+  background-color: $dark-color;
+  padding: 1rem 2rem 2rem 2rem;
+  z-index: 9;
+  transition: transform .8s ease-in-out;
+  max-width: 705px;
+
+  @media (min-width: $tablet) {
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    width: 57%;
+    background-color: $primary-color;
+    padding: 0;
+    height: 178px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  @media (min-width: $laptop) {
+    justify-content: flex-start;
+    width: 49%;
+    padding-left: 60px;
+
+  }
+  @media (min-width: $desktop) {
+    left: 50.6%;
+  }
+
+  &.active-menu {
+    transform: translateY(304px);
+  }
+}
+
+.navigation__list-items {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-left: 0;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 0;
+    gap: 15px;
+  }
+  @media (min-width: $laptop) {
+    gap: 30px;
+  }
+}
+
+.menu {
+  margin-bottom: 1rem;
+
+  & > a {
+    color: $white;
+  }
+}
